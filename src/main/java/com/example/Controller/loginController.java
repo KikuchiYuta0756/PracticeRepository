@@ -9,6 +9,7 @@ public class loginController{
 	@GetMapping("/login")
 	public String getHello() {
 		//hello.htmlに画面遷移
-		return "login";
+		return "login/login";
 	}
+	
 }

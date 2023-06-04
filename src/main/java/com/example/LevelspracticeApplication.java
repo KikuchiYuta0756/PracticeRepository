@@ -8,6 +8,7 @@ public class LevelspracticeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LevelspracticeApplication.class, args);
+		
 	}
 
 }
