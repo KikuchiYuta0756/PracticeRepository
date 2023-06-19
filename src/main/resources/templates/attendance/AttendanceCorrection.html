@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"></meta>
+	<a href="/engraving">トップ</a>
+	<a href="/leavingWorkList">勤怠一覧</a>
+	<a href="/leavingWorkFix">勤怠修正</a>
+	<a href="/leavingWorkApplication">勤怠申請</a>
+	<div>ログインID：ユーザー氏名</div>
+	<form method="post" action="/login">
+	<input type="submit" value="ログアウト"/>
+	</form>
+</head>
+<body>
+	<h1>修正申請</h1>
+	<before action="AttendanceCorrection">
+　　　  <label for="Correction">申請項目</label>
+      <select name="Correction" id="Correction">
+		<option value="default">選択してください</option>
+		<option value="atWork">勤怠(出勤）</option>
+		<option value="leaving">勤怠(退勤）</option>
+　　　　　　 <option value="name">氏名</option>
+      </select>
+      </br>
+	修正日時<input id="Attendance" type="datetime-local"
+	         name="AttendanceDate" value="2023-00-00T00:00"/>
+	</form>
+	<form method="post" action="/login">
+	氏名<input type="text" name="username"/>
+	</form>
+	申請事由：<input type="text" name="text2"/>
+	</form>
+　　　</br>
+	<input type="submit" value="申請"/>
+	
+	

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"></meta>
+	<a href="/engraving">トップ</a>
+	<a href="/leavingWorkList">勤怠一覧</a>
+	<a href="/leavingWorkFix">勤怠修正</a>
+	<a href="/leavingWorkApplication">勤怠申請</a>
+	<a>ログインID：ユーザー氏名</a>
+	<form method="post" action="/login">
+	<input type="submit" value="ログアウト"/>
+	</form>
+	<!--JavaScriptで現在日時を取得-->
+<script>
+setInterval('clock()',500); //0.5秒毎にclock()を実行
+
+function clock() {
+	document.getElementById("view_clock").innerHTML = getNow();
+}
+
+function getNow() {
+	var now = new Date();
+	var year = now.getFullYear();
+	var mon = now.getMonth()+1; //１を足すこと
+	var day = now.getDate();
+	var hour = now.getHours();
+	var min = now.getMinutes();
+	var sec = now.getSeconds();
+
+	//出力用
+	var s = year + "年" + mon + "月" + day + "日"; 
+	document.getElementById("RealtimeClock").innerHTML = s;
+	var d = hour + "時" + min + "分" + sec + "秒";
+	document.getElementById("RealtimeDay").innerHTML = d;
+	
+}
+</script>
+	
+	
+	
+	<!--
+	<script>
+	function showTime() {				
+    var now = new Date();
+    var nowHour = now.getHours();
+    var nowMin = now.getMinutes();
+    var nowSec = now.getSeconds();
+  
+    var msg = "現在時刻  " + nowHour + ":" + nowMin + ":" + nowSec;
+    document.getElementById("RealtimeClockArea").innerHTML = msg;
+   }
+    setInterval('showTime()',1000);
+	</script>-->
+<body>
+	<span id="RealtimeClock"></span>
+	</br>
+	<span id="RealtimeDay"></span>
+     <!--<p id="RealtimeDay"></p>
+     <p id="RealtimeClockArea"></p>
+     -->
+     </br>
+	<input type="submit" value="出勤"/>
+	<input type="submit" value="退勤"/>
+	
+</body>
+</html>

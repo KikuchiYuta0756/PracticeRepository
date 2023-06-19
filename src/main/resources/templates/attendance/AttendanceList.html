@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"></meta>
+	<a href="/engraving">トップ</a>
+	<a href="/leavingWorkList">勤怠一覧</a>
+	<a href="/leavingWorkFix">勤怠修正</a>
+	<a href="/leavingWorkApplication">勤怠申請</a>
+	<div>ログインID：ユーザー氏名</div>
+	<form method="post" action="/login">
+	<input type="submit" value="ログアウト"/>
+	</form>
+</head>
+<body>
+	<h1>勤怠一覧</h1>
+	<div>
+		<tr>
+			<th class="th-width">月</th>
+			<th class="th-width">日</th>
+			<th class="th-width">出勤</th>
+			<th class="th-width">退勤</th>
+			<th class="th-width">休憩</th>
+			<th class="th-width">累計</th>
+			<th class="th-width">備考</th>
+		</tr>
+	</div>
+</body>	

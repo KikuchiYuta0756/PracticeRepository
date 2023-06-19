@@ -6,17 +6,8 @@
 	<a href="/leavingWorkList">勤怠一覧</a>
 	<a href="/leavingWorkFix">勤怠修正</a>
 	<a href="/leavingWorkApplication">勤怠申請</a>
+	<div>ログインID：ユーザー氏名</div>
 	<form method="post" action="/login">
 	<input type="submit" value="ログアウト"/>
 	</form>
 </head>
-<body>
-	<!--<h1 th:text="${calendar}"></h1>-->
-	<p th:text="${#calendars.format(#calendars.createNow(), 'yyyy年MM月dd日')}"></p>
-	<p th:text="${#calendars.format(#calendars.createNow(), 'HH時mm分ss秒')}"></p>
-
-	<input type="submit" value="出勤"/>
-	<input type="submit" value="退勤"/>
-	
-</body>
-</html>

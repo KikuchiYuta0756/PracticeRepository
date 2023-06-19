@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @Controller
-public class LeavingWorkController{
+public class AttendanceController{
 	
-	@GetMapping("/engraving")
+	@GetMapping("/AttendanceEngraving")
 	public String getHello() {
 		
 		//Calendarクラスで月・日・現在時刻の取得
@@ -17,8 +17,18 @@ public class LeavingWorkController{
         System.out.println(calendar.get(Calendar.MONTH) + 1);
         System.out.println(calendar.get(Calendar.DATE));
         System.out.println(calendar.getTime());
-		//hello.htmlに画面遷移
-		return "leavingWork/leavingWork";
+		//AttendanceEngraving.htmlに画面遷移
+		return "/attendance/AttendanceEngraving";
+	}
+	
+	@GetMapping("/AttendanceList")
+	public String list() {
+		return "attendance/AttendanceList";
+	}
+	
+	@GetMapping("/AttendanceCorrection")
+	public String correction() {
+		return "attendance/AttendanceCorrection";
 	}
 	
 }
